@@ -9,6 +9,8 @@ var app = express();
 //	res.send('Hello Express');
 //})
 
+var middleware = require('./middleware.js');
+
 var middleware = {
 	requireAuthentication: function (req, res, next) {
 		console.log('private hit!');
