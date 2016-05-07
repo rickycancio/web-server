@@ -11,17 +11,6 @@ var app = express();
 
 var middleware = require('./middleware.js');
 
-var middleware = {
-	requireAuthentication: function (req, res, next) {
-		console.log('private hit!');
-		next();
-	},
-	logger: function (req, res, next) {
-		console.log(new Date().toString() + ' Request: ' + req.method + ' ' + req.originalUrl);
-		next();
-	}
-};
-
 //tell express that we need authentication globally
 app.use(middleware.logger);
 
